@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Sort App by Neha</title>
+		<style>
+			*{ font-size:50px;
+			   font-family:calibri; 
+			   background-color:azure; }
+		</style>
+	</head>
+	<body>
+		<center>
+			<h1> Sort app by Neha</h1>
+			<form onsubmit="show()";>
+				<input type="text" id="name" placeholder="enter your name"/>
+				<br><br>
+				<input type="submit"/>
+			</form>
+				<h2 id="msg"/>
+			<script>
+				function show()
+				{
+					event.preventDefault();
+					let name =document.getElementById("name");
+					let msg = document.getElementById("msg");
+
+					let n = name.value;
+					let nn = n.split("").sort().join("");
+					msg.innerHTML = nn;
+				}
+</script>
+</center>
+</body>
